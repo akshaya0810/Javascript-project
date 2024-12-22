@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    .slider-container {
+      width: 80%;
+      margin: 100px auto;
+      position: relative;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      height: 300px;
+      position: relative;
+    }
+
+    .slide {
+      flex: 1;
+      /* All images will flexibly take up the available space */
+      transition: all 0.5s ease-in-out;
+      opacity: 0.5;
+      /* Lower opacity for side images */
+      filter: blur(5px);
+      /* Blur effect for side images */
+      transform: scale(0.9);
+      /* Shrink size for side images */
+      margin: 0 -50px;
+      /* Negative margin to overlap images slightly */
+      position: relative;
+    }
+
+    .active {
+      opacity: 1;
+      filter: blur(0);
+      transform: scale(1);
+      z-index: 1;
+      margin: 0;
+      /* No margin for the active image */
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .controls {
+      position: absolute;
+      bottom: -50px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .control-btn {
+      background-color: #39b54a;
+      border: none;
+      border-radius: 50%;
+      padding: 15px 20px;
+      margin: 0 10px;
+      cursor: pointer;
+      font-size: 18px;
+      z-index: 2;
+    }
+
+    .control-btn:hover {
+      background-color: #36a048;
+    }
+
+    button:focus {
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slider-container">
+    <h1>Image Slider</h1>
+      <div class="slider">
+        <div class="slide prev">
+        <img src="Images/vinayagar.jpg" alt="Image 1">
+        </div>
+        <div class="slide active">
+        <img src="Images/vinayagar1.jpg" alt="Image 2">
+        </div>
+        <div class="slide next">
+        <img src="Images/vinayagar2.jpg" alt="Image 3">
+        </div>
+      </div>
+        <div class="controls">
+          <button class="control-btn" id="prevBtn">❮</button>
+          <button class="control-btn" id="nextBtn">❯</button>
+        </div>
+  </div>
+ <script src="Image Slider.js"></script>
+</body>
+
+</html>

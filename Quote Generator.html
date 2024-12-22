@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #2c3e50;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #34495e;
+        }
+
+        #quoteDisplay {
+            margin-top: 20px;
+            font-style: italic;
+            font-size: 18px;
+            color: #555;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Quote Generator</h1>
+    <h2>Quote of the Day</h2>
+    <p>Press the Button below</p>
+    <button onclick="generateQuote()">New Quote</button>
+    <p id="quoteDisplay"></p>
+
+    <script src="Quote Generator.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    justify-content: center;
+    color: white;
+    height: 100%;
+    align-items: center;
+}
+img {
+    border-radius: 50%;
+    width: 80px;  /* Set to 80px for a circular shape */
+    height: 80px; /* Ensure height matches width */
+}
+.name {
+    border: 1px solid black;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    background-color: black;
+    margin: 30px;
+    padding-top: 70px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+hr {
+    width: 100px;
+}
+.main {
+    background-image: linear-gradient(red, yellow);
+    width: 100%;
+    height: 700px;
+}
+span {
+    color: orange;
+    font-size: 2vw;
+}
+.u1, .u2, .u3 {
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 130px;
+}
+.user1, .user2, .user3 {
+    position: relative;
+    border-radius: 10px;
+}

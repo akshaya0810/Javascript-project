@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array submit form data</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Include Font Awesome -->
+    <style>
+        body {
+            padding: 20px; /* Add some padding to the body */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        label {
+            width: 100px; /* Set fixed width for labels */
+            font-weight: bold;
+            padding-right: 10px;
+         
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%; /* Full width input */
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .password-container {
+            position: relative;
+            width: 100%; /* Same width as other inputs */
+        }
+
+        .password-container input {
+            width: 100%; /* Full width for the password input */
+            padding-right: 40px; /* Add space for the eye icon */
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #666;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #042a53;
+        }
+
+        h2 {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>Submit Form Data</h2>
+    
+    <form id="userForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter the name" autocomplete="off">
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter the email" autocomplete="off">
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" placeholder="Enter the password" autocomplete="off">
+                <i class="fas fa-eye-slash toggle-password" id="togglePassword"></i> <!-- Initially display fa-eye-slash -->
+            </div>
+        </div>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <pre id="output"></pre>
+    <script src="Array data.js"></script>
+</body>
+</html>

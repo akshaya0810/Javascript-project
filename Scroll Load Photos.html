@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable Photos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+
+        #photos-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        #photos {
+            width: 50%; /* Limit width to ensure square size of images */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+            grid-template-rows: repeat(4, 1fr); /* 4 rows in total */
+            gap: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Photo box styles */
+        .photo-box {
+            width: 100%; /* Takes full grid cell width */
+            height: 120px; /* Set a fixed height to make the images square */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Alternating color classes for boxes */
+        .box-color-1 {
+            background-color: #f0f8ff; /* Light blue */
+        }
+
+        .box-color-2 {
+            background-color: #ffe4e1; /* Light coral */
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image fits the square box */
+            border-radius: 5px;
+        }
+
+        #nextButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #nextButton:hover {
+            background-color: #0056b3;
+        }
+
+        /* Spinner CSS */
+        #spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-left-color: #007bff;
+            animation: spin 1s linear infinite;
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Scrollable container styles */
+        #photos::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        #photos::-webkit-scrollbar-thumb {
+            background-color: #007bff;
+            border-radius: 5px;
+        }
+
+        #photos::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="photos-container">
+        <div id="spinner"></div> <!-- Spinner element -->
+        <div id="photos"></div>
+        <button id="nextButton" onclick="nextPage()">Next</button>
+    </div>
+    
+    <script src="Scroll Load Photos.js"></script>
+</body>
+</html>

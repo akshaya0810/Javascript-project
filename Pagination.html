@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination</title>
+    <style>
+    /* Container for the post list */
+#posts {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* User group for separating posts by User ID */
+.post-box {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Style for post titles and headings */
+.post-box h2 {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.post-box h3 {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Style for pagination slider */
+.pagination-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+/* Pagination button styles */
+.pagination-button {
+    padding: 8px 16px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Arrow button styles */
+.arrow-button {
+    padding: 8px 16px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.arrow-button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+/* Active pagination button styles */
+.pagination-button.active {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.2); /* Make the active button larger */
+}
+
+/* Smaller neighboring buttons */
+.pagination-button:not(.active):hover {
+    transform: scale(1.1);
+}
+
+/* Button hover effect */
+.pagination-button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+body{
+   background-color: rgb(25, 156, 173);
+}
+    </style>
+</head>
+<body>
+    <div id="page-container">
+        <h3>Posts for Users ID</h3>
+        <div id="posts"></div>
+        <div id="pagination"></div>
+    </div> 
+    <script src="Pagination.js"></script>
+</body>
+</html>

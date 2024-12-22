@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table inside creating crud operations</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 40px 0;
+            width: 100%;
+            display: none; /* Initially hide the table */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        th {
+            background-color: #7979d2;
+            color: white;
+        }
+        td {
+            background-color: #EEEDEB;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+        }
+        body {
+            background-color: #CEDF9F;
+        }
+      
+        body{
+            background-image: url(Images/pngtree-nature-wallpapers-image_2683049.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>CRUD Operations</h1>
+    <div class="form-container">
+        <!-- Only the Add button is shown initially -->
+        <button id="add-button" onclick="addRow()">Add</button>
+    </div>
+
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>S.No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
+
+    <script src="Editable crud operations.js"></script>
+</body>
+</html>

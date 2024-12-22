@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api SpaceX Capsules Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            padding: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>SpaceX Capsules Data</h1>
+    <table id="capsulesTable">
+        <thead>
+            <tr>
+                <th>Capsule Id</th>
+                <th>Capsule Serial</th>
+                <th>Capsule Details</th>
+                <th>Original Launch</th>
+                <th>Original Launch Unix</th>
+            </tr>
+        </thead>
+        <tbody id="capsulesTable tbody">
+            <!-- Data will be dynamically inserted here -->
+        </tbody>
+    </table>
+
+    <script src="Api Capsules Data.js"></script>
+</body>
+</html>

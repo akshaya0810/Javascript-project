@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point Adder</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        #totalDiv {
+            margin-bottom: 10px;
+        }
+
+        #inputDiv {
+            margin-bottom: 20px;
+        }
+
+        #inputBox {
+            padding: 5px;
+            font-size: 16px;
+            width: 150px;
+        }
+
+        button {
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+        }
+
+        #pointsDiv {
+            width: 50%;
+            position: relative;
+            height: 500px;
+            border: 1px solid black;
+            background-color: #fff;
+        }
+
+        #points {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .circle {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            border: 1px solid #000;
+        }
+
+        #tableDiv {
+            width: 40%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 2px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        #countBox {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="totalDiv">
+        <p>Total = <span id="countBox">0</span></p>
+    </div>
+    <div id="inputDiv">
+        <input type="number" id="inputBox" placeholder="Enter The Value">
+        <button onclick="addCircle()">Add Point</button>
+    </div>
+    <div id="container">
+        <div id="pointsDiv">
+            <div id="points"></div>
+        </div>
+        <div id="tableDiv">
+            <table style="border:2px">
+                <thead>
+                    <tr>
+                        <th>S.no</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="Point Adder.js"></script>
+</body>
+</html>

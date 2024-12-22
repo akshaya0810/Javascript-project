@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Consumption Tracker</title>
+    <style>
+        /* CSS Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the content horizontally */
+            padding-top: 20px;
+        }
+
+        .appliance-icons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .appliance-icons img {
+            margin-top: 15px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+        }
+
+        .appliance-icons img:hover {
+            border-color: white;
+        }
+
+        .appliance-controls {
+            display: flex;
+            flex-direction: column;
+            width: 450px; /* Fixed width for controls */
+            margin-top: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            color: black;
+        }
+
+        .appliance-row {
+            display: flex;
+            align-items: center; /* Center items vertically */
+            justify-content: space-between;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 10px 0;
+            width: 100%; /* Full width for the row */
+        }
+
+        .appliance-row img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 34px;
+            height: 20px;
+            margin-right: 10px; /* Space between toggle and timer */
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            border-radius: 34px;
+            transition: 0.4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #4caf50;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(14px);
+        }
+
+        .timer, .units {
+            min-width: 60px; /* Ensures a consistent width */
+            text-align: right; /* Align text to the right */
+        }
+
+        .total-consumption {
+            display: flex;
+            gap: 10px;
+            font-size: 18px;
+            color: red;
+        }
+
+        h2 {
+            text-align: center;
+            color: #e46e55; 
+        }
+    </style>
+</head>
+<body>
+<h2>Power Consumption Tracker</h2>
+    <!-- Appliance icons -->
+    <div class="appliance-icons">
+        <img src="Images/fan.jpg" alt="Fan" onclick="addAppliance('Fan', 'Images/fan.jpg')">
+        <img src="Images/offbulb.jpg" alt="Bulb" onclick="addAppliance('Bulb', 'Images/offbulb.jpg', 'Images/onbulb.jpg')">
+        <img src="Images/tv.jpg" alt="TV" onclick="addAppliance('TV', 'Images/tv.jpg')">
+        <img src="Images/fridge.png" alt="Fridge" onclick="addAppliance('Fridge', 'Images/fridge.png')">
+        <img src="Images/washing machine.jpg" alt="Washer" onclick="addAppliance('Washer', 'Images/washing machine.jpg')">
+    </div>
+    <div class="total-consumption">
+        <span id="total-units">0 units</span>
+        <span id="total-cost">Rs. 0</span>
+    </div>
+    <!-- Appliance control section -->
+    <div id="appliance-list" class="appliance-controls"></div>
+
+<script src="Finalproject.js"></script>
+</body>
+</html>
